@@ -1,4 +1,4 @@
-# Acadarena
+# AcadArena
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,5 +64,29 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Acadarena is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://equityzen.com/company/acadarena
+AcadArena is a Philippine campus gaming and esports company founded in 2019 that builds student
+communities around games across high-school and college campuses in the Philippines and Southeast
+Asia — running a student-club accreditation network (Alliance), a club Incubator, the Buffs
+event-sponsorship marketplace, an Alliance for Teachers practice community, and collegiate
+competitions.
+
+**AcadArena publishes no public API.** As of 2026-09-06 there is no developer portal, API
+reference, OpenAPI/AsyncAPI/GraphQL contract, MCP server or A2A agent card on any host it
+operates. What this profile records is the probe evidence for that absence, plus the small public
+surface that does exist.
+
+- Website: https://www.acadarena.com/
+- Community: https://discord.gg/acadarenagg
+- GitHub organization: https://github.com/Arclight-Labs (profile README titles it "AcadArena
+  Technologies Inc")
+- Secondary-market listing: https://equityzen.com/company/acadarena
+
+Notable findings from this pass:
+
+- `api.acadarena.com` is a **dangling DNS record** — a CNAME to
+  `acadarena-api-j88i8.ondigitalocean.app`, which does not resolve.
+- The public website's backend is a Supabase project (`aatesefpjfdqshisyriz.supabase.co`) that
+  rejects anonymous requests with HTTP 401. No credentials were used, so nothing there was read.
+- `app.acadarena.com` is a Squarespace site behind site-wide password protection (HTTP 401).
+- No `/.well-known/` document is served on any AcadArena host; see
+  `well-known/acadarena-well-known.yml` for the full probe table.

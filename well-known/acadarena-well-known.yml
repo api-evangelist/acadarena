@@ -1,0 +1,160 @@
+generated: '2026-09-06'
+method: probed
+source: >-
+  Anonymous HTTPS probes of the named /.well-known/ paths on every host this record knows —
+  the registrable domain and www, the Firebase preview host the site also serves from, the
+  student-facing app host, the Arclight and ROE2 subdomains, the Supabase project the website
+  calls, and the api. subdomain named in DNS.
+summary: >-
+  No /.well-known/ document is served on any AcadArena host. Every path 404s, is unreachable, or
+  is answered by a single-page-app catch-all that returns the same HTML shell for every path.
+  No WellKnown or SecurityTxt pointer is emitted — this file records an absence, not a presence.
+hosts:
+- host: acadarena.com
+  note: Apex 301-redirects every path to www.acadarena.com; no document served here.
+  documents:
+  - path: /.well-known/security.txt
+    status: 301
+  - path: /.well-known/openid-configuration
+    status: 301
+  - path: /.well-known/oauth-authorization-server
+    status: 301
+  - path: /.well-known/oauth-protected-resource
+    status: 301
+  - path: /.well-known/api-catalog
+    status: 301
+  - path: /.well-known/ai-plugin.json
+    status: 301
+  - path: /.well-known/agent-card.json
+    status: 301
+  - path: /.well-known/agent.json
+    status: 301
+  - path: /.well-known/aauth-resource.json
+    status: 301
+  - path: /llms.txt
+    status: 301
+- host: www.acadarena.com
+  note: Primary Next.js marketing site. Every probed path returns the site's 404 page.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/aauth-resource.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+- host: acadarena-website.web.app
+  note: Firebase Hosting origin serving the same Next.js build; identical 404s.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+- host: roe2.acadarena.com
+  note: >-
+    ROE2 broadcast-overlay app. Returns HTTP 200 with the same 409-byte single-page-app HTML
+    shell for EVERY path probed, including paths that cannot exist. Treated as a miss, not a
+    document — this is the SPA catch-all false positive.
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    result: html-shell
+  - path: /.well-known/api-catalog
+    status: 200
+    result: html-shell
+  - path: /.well-known/agent-card.json
+    status: 200
+    result: html-shell
+  - path: /.well-known/agent.json
+    status: 200
+    result: html-shell
+  - path: /llms.txt
+    status: 200
+    result: html-shell
+- host: app.acadarena.com
+  note: >-
+    Squarespace site with site-wide password protection ("Private Site"). security.txt and
+    llms.txt return 401; the remaining paths return a 3,138-byte HTML shell, not a document.
+  documents:
+  - path: /.well-known/security.txt
+    status: 401
+  - path: /.well-known/openid-configuration
+    status: 200
+    result: html-shell
+  - path: /.well-known/api-catalog
+    status: 200
+    result: html-shell
+  - path: /.well-known/agent-card.json
+    status: 200
+    result: html-shell
+  - path: /.well-known/agent.json
+    status: 200
+    result: html-shell
+  - path: /llms.txt
+    status: 401
+- host: arclight.acadarena.com
+  note: >-
+    Webflow-hosted Arclight site. The TLS handshake fails from this client
+    (tlsv1 alert internal error) so no path could be read; recorded as unreachable, not absent.
+  documents:
+  - path: /.well-known/security.txt
+    status: 0
+    result: tls-handshake-failed
+  - path: /.well-known/agent-card.json
+    status: 0
+    result: tls-handshake-failed
+  - path: /llms.txt
+    status: 0
+    result: tls-handshake-failed
+- host: aatesefpjfdqshisyriz.supabase.co
+  note: >-
+    The Supabase project the public website calls. All /.well-known/ paths return the Supabase
+    router's JSON 404 ("requested path is invalid").
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: api.acadarena.com
+  note: >-
+    Named in DNS as a CNAME to acadarena-api-j88i8.ondigitalocean.app, which itself does not
+    resolve — the hostname is a dangling record and nothing could be probed.
+  documents:
+  - path: /.well-known/security.txt
+    status: 0
+    result: dns-nxdomain
+  - path: /.well-known/agent-card.json
+    status: 0
+    result: dns-nxdomain
+  - path: /llms.txt
+    status: 0
+    result: dns-nxdomain

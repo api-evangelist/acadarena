@@ -1,17 +1,35 @@
 aid: acadarena
-name: Acadarena
-description: 'Acadarena is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+name: AcadArena
+description: >-
+  AcadArena is a Philippine campus gaming and esports company founded in 2019 by Ariane Lim, Kevin
+  Hoang and Justin Banusin, and trades today as a brand owned by AcadArena Digital Education
+  Solutions OPC. It builds student communities around games across high-school and college campuses
+  in the Philippines and Southeast Asia, running the AcadArena Alliance student-club accreditation
+  network, an Incubator that helps students stand up a club on a campus that has none, the Buffs
+  marketplace that supplies loot and sponsorship for campus events, an Alliance for Teachers
+  practice community for moderators and educators, and collegiate competitions. The company has
+  served hundreds of schools, has been the Philippine collegiate licensee for Riot Games titles, and
+  raised a $3.5M seed round. Its public surface is a Next.js marketing site backed by a key-gated
+  Supabase project; AcadArena publishes no developer portal, API reference, SDK or machine-readable
+  contract, and the api.acadarena.com hostname it once used now resolves only to a dangling CNAME.
+image: https://www.acadarena.com/assets/logo/acadarena_logo.png
 url: https://raw.githubusercontent.com/api-evangelist/acadarena/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-09-06'
 modified: '2026-09-06'
 tags:
 - Company
+- Esports
+- Gaming
+- Education
+- Community
+- Events
+- Students
+- Sponsorship
+- Philippines
+- Southeast Asia
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +37,52 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/acadarena-domain-security.yml
 - type: Website
+  url: https://www.acadarena.com/
+- type: PrivacyPolicy
+  url: https://www.acadarena.com/privacypolicy
+- type: Community
+  url: https://discord.gg/acadarenagg
+- type: GitHubOrganization
+  url: https://github.com/Arclight-Labs
+- type: LinkedIn
+  url: https://www.linkedin.com/company/acadarena
+- type: Twitter
+  url: https://x.com/acadarena
+- type: Instagram
+  url: https://www.instagram.com/acadarenagg
+- type: SecondaryMarketListing
   url: https://equityzen.com/company/acadarena
+- type: Packages
+  url: packages/acadarena-packages.yml
+- type: LLMsTxt
+  url: llms/acadarena-llms.txt
+- type: Plans
+  url: plans/acadarena-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/acadarena-rate-limits.yml
+x-enrichment:
+  date: '2026-09-06'
+  status: minimal
+  artifacts_added: 6
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    AcadArena ships student-facing campus gaming programs and a Next.js marketing site with no
+    developer, API or documentation section anywhere in its navigation; the only API hostname it
+    ever named, api.acadarena.com, is now a dangling CNAME to a deleted DigitalOcean app that does
+    not resolve, and the Supabase project the website itself calls rejects anonymous requests.
+  evidence:
+  - url: https://www.acadarena.com/
+    status: 200
+  - url: https://www.acadarena.com/llms.txt
+    status: 404
+  - url: https://www.acadarena.com/.well-known/api-catalog
+    status: 404
+  - url: https://aatesefpjfdqshisyriz.supabase.co/rest/v1/
+    status: 401
+  checked: '2026-09-06'

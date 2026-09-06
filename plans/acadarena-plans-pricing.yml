@@ -1,0 +1,23 @@
+generated: '2026-09-06'
+method: searched
+source: https://www.acadarena.com/
+summary: >-
+  AcadArena publishes no pricing page and no API plans. Its student-facing programs (Alliance
+  accreditation, the club Incubator, Buffs event support, Alliance for Teachers) are
+  application-based and free to students and clubs; the commercial motion is brand and school
+  partnerships arranged directly, with no published rate card. There is no developer product to
+  price, because there is no public API.
+plan_count: 0
+plans: []
+pages_checked:
+- url: https://www.acadarena.com/
+  status: 200
+  note: Homepage lists four "Apply Now" programs and a Consult call to action; no pricing.
+- url: https://www.acadarena.com/buffs
+  status: 200
+  note: Buffs marketplace page — applications for event loot/sponsorship, no prices.
+- url: https://www.acadarena.com/privacypolicy
+  status: 200
+- url: https://www.acadarena.com/terms
+  status: 404
+  note: Linked from the site footer but not served.

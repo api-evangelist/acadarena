@@ -1,0 +1,63 @@
+generated: '2026-09-06'
+method: searched
+source: >-
+  npm registry search + registry.npmjs.org metadata for the @acadarena scope; PyPI, RubyGems and
+  crates.io searched for "acadarena" with no result; GitHub org (github.com/Arclight-Labs, whose
+  .github profile README titles it "AcadArena Technologies Inc") reviewed for published libraries.
+summary: >-
+  AcadArena publishes no client SDK, because it publishes no API. One first-party package exists
+  on npm under the @acadarena scope — an internal build-tooling fork, not an API client — and it
+  has not been released since April 2023. No type: SDKs pointer is emitted: nothing here wraps an
+  AcadArena API.
+packages:
+- name: '@acadarena/zod-prisma'
+  registry: npm
+  url: https://www.npmjs.com/package/@acadarena/zod-prisma
+  metadata_url: https://registry.npmjs.org/@acadarena%2Fzod-prisma
+  official: true
+  official_basis: >-
+    Published under the company's own npm scope (@acadarena) and sourced from the company's own
+    GitHub org (github.com/AcadArena/zod-prisma, now github.com/Arclight-Labs/zod-prisma).
+  kind: build-tooling
+  api_client: false
+  language: TypeScript
+  license: MIT
+  description: A Prisma generator that creates Zod schemas for all of your models.
+  repository: https://github.com/Arclight-Labs/zod-prisma
+  version: 0.9.0
+  published: '2023-04-09'
+  first_published: '2022-11-29'
+  releases: 6
+  note: >-
+    A fork of the community zod-prisma generator, used inside AcadArena's own stack. Latest
+    release 0.9.0 (2023-04-09); no release in the ~29 months since. It is developer tooling, not
+    a client library for an AcadArena service.
+registries_searched:
+- registry: npm
+  query: acadarena
+  result: 1 package (@acadarena/zod-prisma)
+- registry: pypi
+  query: acadarena
+  result: 404 — no project
+- registry: rubygems
+  query: acadarena
+  result: 404 — no gem
+- registry: crates.io
+  query: acadarena
+  result: 0 crates
+- registry: maven-central
+  query: acadarena
+  result: 0 artifacts (search.maven.org solrsearch numFound 0)
+- registry: nuget
+  query: acadarena
+  result: 0 packages (azuresearch totalHits 0)
+- registry: packagist
+  query: acadarena
+  result: 0 packages
+- registry: pkg.go.dev
+  query: github.com/arclight-labs/roe2
+  result: >-
+    404 on pkg.go.dev — no Go module is published. proxy.golang.org resolves a bare git tag
+    (v0.0.17, 2022-10-07) from the repository, which is a VCS tag, not a published module.
+sdk_count: 0
+package_count: 1

@@ -1,0 +1,19 @@
+generated: '2026-09-06'
+method: searched
+source: https://www.acadarena.com/
+summary: >-
+  No rate limits are documented, because AcadArena publishes no API, no developer portal and no
+  reference. The only machine-callable surface reachable from its public site is the Supabase
+  project the website itself calls, which rejects anonymous requests with HTTP 401 ("No API key
+  found in request") and publishes no limit documentation or rate-limit headers to an
+  unauthenticated caller.
+limit_count: 0
+limits: []
+headers: []
+probes:
+- url: https://aatesefpjfdqshisyriz.supabase.co/rest/v1/
+  status: 401
+  note: Anonymous request rejected; no RateLimit-* or X-RateLimit-* headers observed.
+- url: https://www.acadarena.com/
+  status: 200
+  note: No developer or API documentation anywhere in the site navigation.
