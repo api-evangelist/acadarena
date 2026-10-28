@@ -64,29 +64,94 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-AcadArena is a Philippine campus gaming and esports company founded in 2019 that builds student
-communities around games across high-school and college campuses in the Philippines and Southeast
-Asia — running a student-club accreditation network (Alliance), a club Incubator, the Buffs
-event-sponsorship marketplace, an Alliance for Teachers practice community, and collegiate
-competitions.
+AcadArena is a Philippine campus gaming and esports company founded in 2019 by Ariane Lim, Kevin Hoang and Justin Banusin, and trades today as a brand owned by AcadArena Digital Education Solutions OPC. It builds student communities around games across high-school and college campuses in the Philippines and Southeast Asia, running the AcadArena Alliance student-club accreditation network, an Incubator that helps students stand up a club on a campus that has none, the Buffs marketplace that supplies loot and sponsorship for campus events, an Alliance for Teachers practice community for moderators and educators, and collegiate competitions. The company has served hundreds of schools, has been the Philippine collegiate licensee for Riot Games titles, and raised a $3.5M seed round. Its public surface is a Next.js marketing site backed by a key-gated Supabase project; AcadArena publishes no developer portal, API reference, SDK or machine-readable contract, and the api.acadarena.com hostname it once used now resolves only to a dangling CNAME.
 
-**AcadArena publishes no public API.** As of 2026-09-06 there is no developer portal, API
-reference, OpenAPI/AsyncAPI/GraphQL contract, MCP server or A2A agent card on any host it
-operates. What this profile records is the probe evidence for that absence, plus the small public
-surface that does exist.
+**Areas:** Company · Esports · Gaming · Education · Community · Event · Students · Sponsorship · Philippines · Southeast Asia
 
-- Website: https://www.acadarena.com/
-- Community: https://discord.gg/acadarenagg
-- GitHub organization: https://github.com/Arclight-Labs (profile README titles it "AcadArena
-  Technologies Inc")
-- Secondary-market listing: https://equityzen.com/company/acadarena
+## AcadArena on APIs.io
 
-Notable findings from this pass:
+Everything profiled for AcadArena is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/acadarena/](https://apis.io/providers/acadarena/)** — or go straight to one of the APIs or properties below.
 
-- `api.acadarena.com` is a **dangling DNS record** — a CNAME to
-  `acadarena-api-j88i8.ondigitalocean.app`, which does not resolve.
-- The public website's backend is a Supabase project (`aatesefpjfdqshisyriz.supabase.co`) that
-  rejects anonymous requests with HTTP 401. No credentials were used, so nothing there was read.
-- `app.acadarena.com` is a Squarespace site behind site-wide password protection (HTTP 401).
-- No `/.well-known/` document is served on any AcadArena host; see
-  `well-known/acadarena-well-known.yml` for the full probe table.
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Acadarena Domain Security](https://apis.io/security/acadarena/acadarena-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Acadarena Plans Pricing](https://apis.io/plans/acadarena/acadarena-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Acadarena Rate Limits](https://apis.io/rate-limits/acadarena/acadarena-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.acadarena.com/)
+- [Blog](https://www.acadarena.com/news)
+- [Privacy policy](https://www.acadarena.com/privacypolicy)
+- [GitHub](https://github.com/Arclight-Labs)
+
+## API Evangelist rating
+
+**Kin Score 6.9** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 4.8 |
+| Access clarity | 10.5 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 9.8** — Education & Research
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/acadarena/](https://apis.io/providers/acadarena/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for AcadArena: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/acadarena/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
